@@ -11,7 +11,7 @@ A modern, minimalist website for 1Fund Research - a quantitative trading firm sp
 
 ## Live Demo
 
-Visit the live site: [https://yourusername.github.io/PyBet](https://yourusername.github.io/PyBet)
+Visit the live site: [https://sudjoshi.github.io/1fund]
 
 ## Setup for GitHub Pages
 
