@@ -1,6 +1,6 @@
-# 1Fund Research
+# Predictra Markets
 
-A modern, minimalist website for 1Fund Research - a quantitative trading firm specializing in sports betting markets.
+A modern, minimalist website for Predictra Markets - a quantitative trading firm specializing in sports betting markets.
 
 ## Features
 
@@ -35,7 +35,7 @@ Visit the live site: [https://yourusername.github.io/PyBet](https://yourusername
    git add .
    
    # Commit files
-   git commit -m "Initial commit: 1Fund Research website"
+   git commit -m "Initial commit: Predictra Markets website"
    
    # Add your GitHub repository as remote
    git remote add origin https://github.com/YOURUSERNAME/PyBet.git
@@ -79,16 +79,15 @@ PyBet/
 ## Customization
 
 ### Changing the Company Name
-To change from "1Fund Research" to your company name:
-1. Edit `index.html` - search for "1FUND RESEARCH" and replace
-2. Edit `index.html` - search for "1Fund Research" and replace
+To change from "Predictra Markets" to your company name:
+1. Edit `index.html` - search for "PREDICTRA MARKETS" and replace
+2. Edit `index.html` - search for "Predictra Markets" and replace
 3. Edit `styles.css` - update any company-specific styling
 
 ### Updating Content
-- **Team**: Edit the team section in `index.html`
-- **Blog**: Update blog posts in the blog section
-- **Jobs**: Modify job postings in the jobs section
+- **Company Info**: Edit the Who We Are section in `index.html`
 - **Stats**: Change the statistics in the stats grid
+- **Styling**: Modify colors and fonts in `styles.css`
 
 ### Styling
 - **Colors**: Modify the color scheme in `styles.css`

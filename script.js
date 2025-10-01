@@ -29,16 +29,16 @@ class GraphAnimation {
     }
     
     createNodes() {
-        const nodeCount = Math.max(40, Math.floor((this.canvas.width * this.canvas.height) / 20000));
+        const nodeCount = Math.max(50, Math.floor((this.canvas.width * this.canvas.height) / 18000));
         
         for (let i = 0; i < nodeCount; i++) {
             this.nodes.push({
                 x: Math.random() * this.canvas.width,
                 y: Math.random() * this.canvas.height,
-                vx: (Math.random() - 0.5) * 0.8,
-                vy: (Math.random() - 0.5) * 0.8,
-                radius: Math.random() * 2 + 1,
-                opacity: Math.random() * 0.6 + 0.3,
+                vx: (Math.random() - 0.5) * 1.0,
+                vy: (Math.random() - 0.5) * 1.0,
+                radius: Math.random() * 2.5 + 1.2,
+                opacity: Math.random() * 0.7 + 0.4,
                 pulsePhase: Math.random() * Math.PI * 2,
                 color: this.getRandomColor()
             });
@@ -112,13 +112,13 @@ class GraphAnimation {
                 
                 // Connect nodes within a certain distance
                 if (distance < 150) {
-                    const opacity = (1 - distance / 150) * 0.4;
+                    const opacity = (1 - distance / 150) * 0.5;
                     
                     this.ctx.beginPath();
                     this.ctx.moveTo(node1.x, node1.y);
                     this.ctx.lineTo(node2.x, node2.y);
                     this.ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
-                    this.ctx.lineWidth = 0.5;
+                    this.ctx.lineWidth = 0.7;
                     this.ctx.stroke();
                     
                     this.connections.push({
@@ -143,26 +143,26 @@ class GraphAnimation {
             let currentRadius = node.radius;
             
             // Pulse effect
-            const pulse = Math.sin(node.pulsePhase) * 0.3 + 0.7;
+            const pulse = Math.sin(node.pulsePhase) * 0.4 + 0.8;
             currentOpacity *= pulse;
             
             // Mouse proximity effect
-            if (mouseDistance < 100) {
-                const mouseEffect = (100 - mouseDistance) / 100;
-                currentOpacity += mouseEffect * 0.3;
-                currentRadius += mouseEffect * 1;
+            if (mouseDistance < 120) {
+                const mouseEffect = (120 - mouseDistance) / 120;
+                currentOpacity += mouseEffect * 0.4;
+                currentRadius += mouseEffect * 1.5;
             }
             
             // Draw simple glow effect
             const gradient = this.ctx.createRadialGradient(
                 node.x, node.y, 0,
-                node.x, node.y, currentRadius * 2
+                node.x, node.y, currentRadius * 2.5
             );
-            gradient.addColorStop(0, `rgba(${node.color.r}, ${node.color.g}, ${node.color.b}, ${currentOpacity * 0.8})`);
+            gradient.addColorStop(0, `rgba(${node.color.r}, ${node.color.g}, ${node.color.b}, ${currentOpacity * 0.9})`);
             gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
             
             this.ctx.beginPath();
-            this.ctx.arc(node.x, node.y, currentRadius * 2, 0, Math.PI * 2);
+            this.ctx.arc(node.x, node.y, currentRadius * 2.5, 0, Math.PI * 2);
             this.ctx.fillStyle = gradient;
             this.ctx.fill();
             
