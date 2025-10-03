@@ -84,7 +84,7 @@ body {
 }
 
 .company-logo {
-    max-width: 400px;
+    max-width: 600px;
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
@@ -425,7 +425,7 @@ body {
     }
     
     .company-logo {
-        max-width: 280px;
+        max-width: 350px;
     }
     
     .section-title {
